@@ -1,0 +1,82 @@
+git init
+
+git config --global user.name "your name and last name"
+git config --global user.email "youremail@mail.com"
+
+git add yourfile.txt
+git commit -m "your commit"
+
+git add --all
+
+git log
+
+//to undo or restore from previous commit
+git reset --hard <SHA>
+
+git remote add origin https://github.com/username/repository.git
+
+git push origin master
+git push -f origin master
+
+git pull --rebase https://github.com/username/repository.git
+
+//Delete File ---------------------------------------------------------------
+git rm filename.txt
+
+//if you want to remove the file only from the Git repository and not remove it from the filesystem, use: 
+git rm --cached filename.txt
+
+//Branch ---------------------------------------------------------------
+
+//to push in brach
+git push origin branchname
+
+//branch and merge
+
+//create a branch
+git branch branchname
+
+//to switch branch used checkout
+git checkout branchname
+
+//to merge branch first swith to master
+git checkout master
+git merge branchname
+
+//to delete branch
+git branch -D branchname
+
+//to delete remote branch
+git push :branchname
+
+//display all branch
+git branch
+
+//display all branch remote
+git branch -r
+
+//to copy branch from remote repository
+git fetch origin branchname:branchname
+
+/--------------------------------------------------------------------------------
+//to create git ignore file
+touch .gitignore
+
+used text edit to edit the .gitignorefile ignore file is separated by file
+
+example .gitignorefile
+
+*.<extention>
+<foldername>/*
+
+//to delete remote file
+git rm --cached foldername/* -r
+
+//Log -----------------------------------------------------------------------------
+git log
+git log --max-count=3;
+
+git log --since='2016-07-26'
+git log --since='2016-07-26' --until='2016-07-27'
+
+git log --grep='keyword to search'
